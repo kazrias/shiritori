@@ -7,3 +7,31 @@
 body {
   background-color: #515151;
 }
+
+.shiritori {
+  max-width: 670px;
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.shiritori__title {
+  font-size: 96px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 45px;
+}
+.shiritori__input {
+  position: relative;
+}
+.shiritori__input-field {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}/*# sourceMappingURL=style.css.map */
