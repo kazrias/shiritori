@@ -71,7 +71,8 @@ const statusBtn = document.querySelector('.shiritori__functionality-btn--status'
 const restartBtn = document.querySelector('.shiritori__functionality-btn--restart');
 
 wordsBtn.addEventListener('click', () => {
-  messageField.innerText = game.words;
+  let words=game.words.join(', ')
+  messageField.innerText = words;
 })
 
 statusBtn.addEventListener('click', () => {
