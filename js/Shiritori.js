@@ -48,7 +48,7 @@ function inputEventHandler() {
       messageField.innerText = words
       break;
     case false:
-      messageField.innerText = `"${inputedWord}" is wrong, game over!`;
+      messageField.innerText = `"${inputedWord}" word doesn't fit, game over!`;
       break;
   }
 }
