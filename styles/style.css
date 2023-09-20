@@ -101,5 +101,15 @@ body {
 @media (max-width: 700px) {
   .shiritori__title {
     font-size: 54px;
+    margin-bottom: 20px;
+  }
+  .shiritori__input {
+    height: 40px;
+  }
+  .shiritori__input-field {
+    font-size: 20px;
+  }
+  .shiritori__functionality-btns {
+    margin-bottom: 35px;
   }
 }/*# sourceMappingURL=style.css.map */

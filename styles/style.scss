@@ -113,6 +113,16 @@ body {
   .shiritori{
     &__title{
       font-size: 54px;
+      margin-bottom: 20px;
+    }
+    &__input{
+      height: 40px;
+      &-field{
+        font-size: 20px;
+      }
+    }
+    &__functionality-btns{
+      margin-bottom: 35px;
     }
   }
 }
