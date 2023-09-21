@@ -1,13 +1,17 @@
+function validateWord(word) {
+  return /^[\p{L}\p{M}\p{Zs}]{2,30}$/u.test(word);
+}
+
 class Shiritori {
   #words = [];
   #game_over = false;
   play(word) {
     if (this.#game_over)
       return 'over'
-    if (/\d/.test(word) || word.replaceAll(' ', '').length < 2)
+    if (validateWord(word) || word.replaceAll(' ', '').length < 2)
       return 'type/length'
     const len = this.#words.length;
-    const wordToPush = word.toLowerCase();
+    const wordToPush = word.toLowerCase().trim();
     if (!len || this.#words[len - 1].at(-1) === wordToPush[0] && !this.#words.includes(wordToPush)) {
       this.#words.push(wordToPush)
       return true
@@ -44,7 +48,7 @@ function inputEventHandler() {
       break;
     case true:
       inputField.value = '';
-      let words=game.words.join(', ')
+      let words = game.words.join(', ')
       messageField.innerText = words
       break;
     case false:
@@ -71,7 +75,7 @@ const statusBtn = document.querySelector('.shiritori__functionality-btn--status'
 const restartBtn = document.querySelector('.shiritori__functionality-btn--restart');
 
 wordsBtn.addEventListener('click', () => {
-  let words=game.words.join(', ')
+  let words = game.words.join(', ')
   messageField.innerText = words;
 })
 
@@ -80,6 +84,6 @@ statusBtn.addEventListener('click', () => {
 })
 
 restartBtn.addEventListener('click', () => {
-  inputField.value=''
+  inputField.value = ''
   messageField.innerText = game.restart()
 })
