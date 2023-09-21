@@ -8,7 +8,7 @@ class Shiritori {
   play(word) {
     if (this.#game_over)
       return 'over'
-    if (validateWord(word) || word.replaceAll(' ', '').length < 2)
+    if (!validateWord(word) || word.replaceAll(' ', '').length < 2)
       return 'type/length'
     const len = this.#words.length;
     const wordToPush = word.toLowerCase().trim();
@@ -44,7 +44,7 @@ function inputEventHandler() {
       messageField.innerText = 'Game is over, restart it!'
       break;
     case 'type/length':
-      messageField.innerText = "Word's type must be string and length greater than 1"
+      messageField.innerText = "Word's must contain only letters and length should be greater than 1"
       break;
     case true:
       inputField.value = '';
